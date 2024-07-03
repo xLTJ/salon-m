@@ -37,7 +37,7 @@ export function GhostHeader() {
     )
 }
 
-const NavItem = ({linkText, linkHref}) => {
+const NavItem = ({linkText, linkHref}: { linkText: string; linkHref: string }) => {
     const [isHovered, setIsHovered] = useState(false);
 
     return (
