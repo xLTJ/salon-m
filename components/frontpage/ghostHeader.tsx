@@ -3,7 +3,7 @@ import {Bars3Icon} from '@heroicons/react/20/solid'
 export function GhostHeader() {
     return (
         <header
-            className={`navbar bg-base-300 absolute top-0 bg-opacity-0 text-white`}
+            className={`navbar bg-base-300 absolute top-0 bg-opacity-0 text-white z-10`}
         >
             <div className="navbar-start">
                 <a className="btn btn-ghost text-xl">LOGO</a>
@@ -16,7 +16,7 @@ export function GhostHeader() {
                     <li><a>Forside</a></li>
                     <li><a>Priser</a></li>
                     <li><a>Om os</a></li>
-                    <li><a>Priser</a></li>
+                    <li><a>Kontakt</a></li>
                 </ul>
             </div>
             <div className="navbar-end">

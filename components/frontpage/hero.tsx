@@ -1,10 +1,12 @@
 import React from "react";
 import {allison, poppins, tilt_neon} from "@/components/fonts";
+import {ChevronDownIcon} from '@heroicons/react/20/solid'
+import {ScrollDownButton} from "@/components/buttons/scrollDownButton";
 
 export function Hero() {
     return (
         <div
-            className="hero h-screen"
+            className="hero h-screen relative"
             style={{
                 backgroundImage: "url(https://images.unsplash.com/photo-1499557354967-2b2d8910bcca?q=80&w=2672&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)",
             }}>
@@ -34,6 +36,9 @@ export function Hero() {
                         </span>
                     </button>
                 </div>
+            </div>
+            <div className={"flex justify-center mt-10 absolute bottom-10 text-white"}>
+                <ScrollDownButton/>
             </div>
         </div>
     );
