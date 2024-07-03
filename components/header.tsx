@@ -29,6 +29,7 @@ export function Header() {
                     <li><a>Priser</a></li>
                     <li><a>Om os</a></li>
                     <li><a>Kontakt</a></li>
+                    <li className={"btn btn-primary text-xl"}><a>Bestil Tid</a></li>
                 </ul>
             </nav>
         </header>

@@ -1,5 +1,5 @@
 import React from "react";
-import {allison, poppins, tilt_neon} from "@/components/fonts";
+import {allison, poppins, raleway, tilt_neon} from "@/components/fonts";
 import {ChevronDownIcon} from '@heroicons/react/20/solid'
 import {ScrollDownButton} from "@/components/buttons/scrollDownButton";
 
@@ -8,13 +8,13 @@ export function Hero() {
         <div
             className="hero h-screen relative"
             style={{
-                backgroundImage: "url(https://images.unsplash.com/photo-1499557354967-2b2d8910bcca?q=80&w=2672&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)",
+                backgroundImage: "url(https://res.cloudinary.com/drpcy82zw/image/upload/v1720028577/oladimeji-odunsi-n5aE6hOY6do-unsplash_yxu4pw.jpg)",
             }}>
             <div className="hero-overlay bg-opacity-60 bg-black"></div>
-            <div className="hero-content text-neutral-content text-center">
+            <div className="hero-content text-neutral-content text-center px-12">
                 <div className="text-white">
                     <h1
-                        className={`${tilt_neon.className} mb-5 text-8xl animate-fade-up opacity-0`}
+                        className={`${raleway.className} mb-5 text-4xl lg:text-8xl animate-fade-up opacity-0 font-semibold`}
                         style={{animationDelay: "0.15s", animationFillMode: "forwards"}}
                     >
                         Slogan der siger et eller andet!

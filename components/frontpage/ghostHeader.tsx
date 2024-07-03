@@ -8,7 +8,7 @@ export function GhostHeader() {
             <div className="navbar-start">
                 <a className="btn btn-ghost text-xl">LOGO</a>
             </div>
-            <div className="navbar-center">
+            <div className="navbar-center hidden lg:block">
                 <ul
                     className="menu menu-horizontal px-1 text-3xl gap-10 animate-fade-up opacity-0"
                     style={{animationFillMode: "forwards"}}
@@ -19,7 +19,7 @@ export function GhostHeader() {
                     <li><a>Kontakt</a></li>
                 </ul>
             </div>
-            <div className="navbar-end">
+            <div className="navbar-end py-3">
                 <div className={"relative flex mr-6"}>
                     <div className={"absolute z-0 h-10 w-10"}>
                         <Bars3Icon/>
