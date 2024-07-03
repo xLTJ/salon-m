@@ -14,7 +14,7 @@ export function Hero() {
             <div className="hero-content text-neutral-content text-center px-12">
                 <div className="text-white">
                     <h1
-                        className={`${raleway.className} mb-5 text-4xl lg:text-8xl animate-fade-up opacity-0 font-semibold`}
+                        className={`${raleway.className} mb-5 text-4xl md:text-6xl lg:text-8xl animate-fade-up opacity-0 font-semibold`}
                         style={{animationDelay: "0.15s", animationFillMode: "forwards"}}
                     >
                         Slogan der siger et eller andet!
@@ -31,7 +31,7 @@ export function Hero() {
                         <span
                             className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#476186_0%,#f87171_50%,#476186_100%)]"/>
                         <span
-                            className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-black px-12 py-4 text-xl font-bold text-white backdrop-blur-3xl group-active:text-lg duration-200 group-hover:scale-y-95 group-hover:scale-x-[0.98] ease-in-out">
+                            className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-black px-12 py-4 text-xl font-bold text-white backdrop-blur-3xl group-active:text-lg duration-200 group-hover:scale-y-95 group-hover:scale-x-[0.98] ease-in-out z-10">
                             Book online
                         </span>
                     </button>

@@ -14,7 +14,7 @@ export function ScrollDownButton() {
     return (
         <button
             onClick={scrollPastHero}
-            className={"hover:text-primary duration-500"}
+            className={"hover:text-primary hover:scale-125 duration-500"}
         >
             <ChevronDownIcon height={75}/>
         </button>
