@@ -1,7 +1,7 @@
 import React from "react";
 import {allison, poppins, raleway, tilt_neon} from "@/components/fonts";
 import {ChevronDownIcon} from '@heroicons/react/20/solid'
-import {ScrollDownButton} from "@/components/buttons/scrollDownButton";
+import {ScrollDownButton} from "@/components/buttons/scroll-down-button";
 
 export function Hero() {
     return (
