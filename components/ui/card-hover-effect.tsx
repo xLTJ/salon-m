@@ -122,6 +122,6 @@ export const CardDescription = ({
     );
 };
 
-function screenIsOverMediumSize() {
+const screenIsOverMediumSize = () => {
     return window.innerWidth > 768
 }
