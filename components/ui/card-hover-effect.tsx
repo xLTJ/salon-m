@@ -32,7 +32,7 @@ export const HoverEffect = ({
                     onMouseEnter={() => setHoveredIndex(idx)}
                     onMouseLeave={() => setHoveredIndex(null)}
                 >
-                    {isMobileDevice() && <AnimatePresence>
+                    {screenIsOverMediumSize() && <AnimatePresence>
                         {hoveredIndex === idx && (
                             <motion.span
                                 className="absolute inset-0 h-full w-full bg-neutral-200 dark:bg-slate-800/[0.8] rounded-3xl"
@@ -120,6 +120,6 @@ export const CardDescription = ({
     );
 };
 
-function isMobileDevice() {
-    return window.innerWidth < 768
+function screenIsOverMediumSize() {
+    return window.innerWidth > 768
 }
