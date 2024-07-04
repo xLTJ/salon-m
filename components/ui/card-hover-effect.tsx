@@ -3,7 +3,7 @@
 import {cn} from "@/utils/cn";
 import {AnimatePresence, motion} from "framer-motion";
 import Link from "next/link";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 
 export const HoverEffect = ({
                                 items,
@@ -18,6 +18,12 @@ export const HoverEffect = ({
     className?: string;
 }) => {
     let [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+    const [isPhone, setIsPhone] = useState(false);
+
+    useEffect(() => {
+        const userAgent = window.navigator.userAgent;
+        setIsPhone(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent));
+    }, []);
 
     return (
         <div
@@ -34,7 +40,7 @@ export const HoverEffect = ({
                     onMouseEnter={() => setHoveredIndex(idx)}
                     onMouseLeave={() => setHoveredIndex(null)}
                 >
-                    {!isUserOnPhone() && <AnimatePresence>
+                    {!isPhone && <AnimatePresence>
                         {hoveredIndex === idx && (
                             <motion.span
                                 className="absolute inset-0 h-full w-full bg-neutral-200 dark:bg-slate-800/[0.8] rounded-3xl"
@@ -121,8 +127,3 @@ export const CardDescription = ({
         </p>
     );
 };
-
-const isUserOnPhone = () => {
-    const userAgent = window.navigator.userAgent;
-    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent);
-}
