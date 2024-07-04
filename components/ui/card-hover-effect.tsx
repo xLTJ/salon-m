@@ -32,10 +32,10 @@ export const HoverEffect = ({
                     onMouseEnter={() => setHoveredIndex(idx)}
                     onMouseLeave={() => setHoveredIndex(null)}
                 >
-                    <AnimatePresence>
+                    {isMobileDevice() && <AnimatePresence>
                         {hoveredIndex === idx && (
                             <motion.span
-                                className="absolute inset-0 h-full w-full bg-neutral-200 dark:bg-slate-800/[0.8] rounded-3xl hidden md:block"
+                                className="absolute inset-0 h-full w-full bg-neutral-200 dark:bg-slate-800/[0.8] rounded-3xl"
                                 layoutId="hoverBackground"
                                 initial={{opacity: 0}}
                                 animate={{
@@ -48,7 +48,7 @@ export const HoverEffect = ({
                                 }}
                             />
                         )}
-                    </AnimatePresence>
+                    </AnimatePresence>}
                     <Card image_url={item.image_url}>
                         <CardTitle>{item.title}</CardTitle>
                         <CardDescription>{item.description}</CardDescription>
@@ -119,3 +119,7 @@ export const CardDescription = ({
         </p>
     );
 };
+
+function isMobileDevice() {
+    return window.innerWidth < 768
+}
