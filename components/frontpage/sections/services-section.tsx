@@ -5,7 +5,7 @@ import {HoverEffect} from "@/components/ui/card-hover-effect";
 
 export function ServicesSection() {
     return (
-        <section className={"bg-base-200 h-screen"}>
+        <section className={"bg-slate-400/50 h-screen"}>
             <div className={"pt-32 pb-12"}>
                 <h2 className={`${raleway.className} text-6xl font-semibold`}>Hvad tilbyder vi?</h2>
             </div>

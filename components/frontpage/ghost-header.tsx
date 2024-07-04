@@ -4,6 +4,7 @@ import {Bars3Icon} from '@heroicons/react/20/solid'
 import {motion} from "framer-motion";
 import {useState} from "react";
 import Link from "next/link";
+import {raleway} from "@/components/fonts";
 
 export function GhostHeader() {
     return (
@@ -15,7 +16,7 @@ export function GhostHeader() {
             </div>
             <div className="navbar-center hidden lg:block">
                 <ul
-                    className="menu menu-horizontal px-1 text-3xl gap-10 animate-fade-up opacity-0"
+                    className="menu-horizontal px-1 text-3xl gap-10 animate-fade-up opacity-0"
                     style={{animationFillMode: "forwards"}}
                 >
                     <NavItem linkText="Forside" linkHref="/"/>
@@ -46,7 +47,8 @@ const NavItem = ({linkText, linkHref}: { linkText: string; linkHref: string }) =
             onMouseLeave={() => setIsHovered(false)}
             className={""}
         >
-            <Link href={linkHref} className="relative hover:bg-opacity-0 hover:bg-white">
+            <Link href={linkHref}
+                  className={`relative py-2 px-6 ${raleway.className} font-semibold`}>
                 {linkText}
                 <motion.span
                     className="absolute bottom-0 left-0 h-0.5 bg-secondary rounded-xl"
