@@ -22,7 +22,7 @@ export const HoverEffect = ({
     return (
         <div
             className={cn(
-                "grid grid-cols-2  lg:grid-cols-3  py-10",
+                "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3  py-10",
                 className
             )}
         >
@@ -70,6 +70,13 @@ export const Card = ({
     children: React.ReactNode;
     image_url?: string;
 }) => {
+    const [isPhone, setIsPhone] = useState(false);
+
+    useEffect(() => {
+        const userAgent = window.navigator.userAgent;
+        setIsPhone(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent));
+    }, []);
+
     return (
         <div
             className={cn(
@@ -83,10 +90,10 @@ export const Card = ({
             <div className="relative z-50 bg-black bg-opacity-50 p-4 w-full h-full flex flex-col justify-center">
                 <div className="p-4">{children}</div>
             </div>
-            {/*<div*/}
-            {/*    className="absolute inset-0 bg-cover bg-center filter group-hover:blur-sm transition-all duration-300 ease-in-out"*/}
-            {/*    style={{backgroundImage: `url(${image_url})`}}*/}
-            {/*/>*/}
+            {!isPhone && <div
+                className="absolute inset-0 bg-cover bg-center filter group-hover:blur-sm transition-all duration-300 ease-in-out"
+                style={{backgroundImage: `url(${image_url})`}}
+            />}
         </div>
     );
 };
