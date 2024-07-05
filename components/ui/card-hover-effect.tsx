@@ -18,12 +18,6 @@ export const HoverEffect = ({
     className?: string;
 }) => {
     let [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
-    const [isPhone, setIsPhone] = useState(false);
-
-    useEffect(() => {
-        const userAgent = window.navigator.userAgent;
-        setIsPhone(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent));
-    }, []);
 
     return (
         <div
@@ -40,23 +34,23 @@ export const HoverEffect = ({
                     onMouseEnter={() => setHoveredIndex(idx)}
                     onMouseLeave={() => setHoveredIndex(null)}
                 >
-                    {/*{!isPhone && <AnimatePresence>*/}
-                    {/*    {hoveredIndex === idx && (*/}
-                    {/*        <motion.span*/}
-                    {/*            className="absolute inset-0 h-full w-full bg-neutral-200 dark:bg-slate-800/[0.8] rounded-3xl"*/}
-                    {/*            layoutId="hoverBackground"*/}
-                    {/*            initial={{opacity: 0}}*/}
-                    {/*            animate={{*/}
-                    {/*                opacity: 1,*/}
-                    {/*                transition: {duration: 0.15},*/}
-                    {/*            }}*/}
-                    {/*            exit={{*/}
-                    {/*                opacity: 0,*/}
-                    {/*                transition: {duration: 0.15, delay: 0.2},*/}
-                    {/*            }}*/}
-                    {/*        />*/}
-                    {/*    )}*/}
-                    {/*</AnimatePresence>}*/}
+                    <AnimatePresence>
+                        {hoveredIndex === idx && (
+                            <motion.span
+                                className="absolute inset-0 h-full w-full bg-neutral-200 dark:bg-slate-800/[0.8] rounded-3xl"
+                                layoutId="hoverBackground"
+                                initial={{opacity: 0}}
+                                animate={{
+                                    opacity: 1,
+                                    transition: {duration: 0.15},
+                                }}
+                                exit={{
+                                    opacity: 0,
+                                    transition: {duration: 0.15, delay: 0.2},
+                                }}
+                            />
+                        )}
+                    </AnimatePresence>
                     <Card image_url={item.image_url}>
                         <CardTitle>{item.title}</CardTitle>
                         <CardDescription>{item.description}</CardDescription>
@@ -89,10 +83,10 @@ export const Card = ({
             <div className="relative z-50 bg-black bg-opacity-50 p-4 w-full h-full flex flex-col justify-center">
                 <div className="p-4">{children}</div>
             </div>
-            <div
-                className="absolute inset-0 bg-cover bg-center filter group-hover:blur-sm transition-all duration-300 ease-in-out"
-                style={{backgroundImage: `url(${image_url})`}}
-            />
+            {/*<div*/}
+            {/*    className="absolute inset-0 bg-cover bg-center filter group-hover:blur-sm transition-all duration-300 ease-in-out"*/}
+            {/*    style={{backgroundImage: `url(${image_url})`}}*/}
+            {/*/>*/}
         </div>
     );
 };
