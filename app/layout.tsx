@@ -3,6 +3,10 @@ import {Inter} from "next/font/google";
 import "./globals.css";
 import {Header} from "@/components/header";
 import {Footer} from "@/components/footer";
+import {GhostHeader} from "@/components/frontpage/ghost-header";
+import {Hero} from "@/components/frontpage/hero";
+import {AboutSection} from "@/components/frontpage/sections/about-section";
+import {ServicesSection} from "@/components/frontpage/sections/services-section";
 
 const inter = Inter({subsets: ["latin"]});
 
@@ -19,9 +23,24 @@ export default function RootLayout({
     return (
         <html lang="en" className={"scrollbar-thin"}>
         <body className={inter.className}>
-        <Header/>
-        {children}
-        <Footer/>
+        <div className="drawer drawer-end">
+            <input id="my-drawer" type="checkbox" className="drawer-toggle"/>
+            {/*Page Content*/}
+
+            <div className="drawer-content">
+                <Header/>
+                {children}
+                <Footer/>
+            </div>
+
+            <div className="drawer-side z-50">
+                <label htmlFor="my-drawer" aria-label="close sidebar" className="drawer-overlay"></label>
+                <ul className="menu bg-base-200 text-base-content min-h-full w-80 p-4">
+                    <li><a>Sidebar Item 1</a></li>
+                    <li><a>Sidebar Item 2</a></li>
+                </ul>
+            </div>
+        </div>
         </body>
         </html>
     );
