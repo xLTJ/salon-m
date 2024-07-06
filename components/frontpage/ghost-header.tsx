@@ -19,9 +19,8 @@ export function GhostHeader() {
                     className="menu-horizontal px-1 text-3xl gap-16 animate-fade-up opacity-0"
                     style={{animationFillMode: "forwards"}}
                 >
-                    <NavItem linkText="Services" linkHref="/services"/>
-                    <NavItem linkText="Priser" linkHref="/priser"/>
                     <NavItem linkText="Om os" linkHref="/om-os"/>
+                    <NavItem linkText="Behandlinger & Priser" linkHref="/behandlinger-og-priser"/>
                     <NavItem linkText="Kontakt" linkHref="/kontakt"/>
                 </ul>
             </div>

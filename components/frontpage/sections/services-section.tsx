@@ -19,32 +19,32 @@ export function ServicesSection() {
 export const projects = [
     {
         title: "Dameklip",
-        link: "https://stripe.com",
+        link: "/behandlinger-og-priser",
         image_url: "https://res.cloudinary.com/drpcy82zw/image/upload/v1720037438/Female_Haircut2_xpb7mq.jpg",
     },
     {
         title: "Herreklip",
-        link: "https://netflix.com",
+        link: "/behandlinger-og-priser",
         image_url: "https://res.cloudinary.com/drpcy82zw/image/upload/v1720037082/Male_Haircut_aiivq3.jpg",
     },
     {
         title: "Børneklip",
-        link: "https://google.com",
+        link: "/behandlinger-og-priser",
         image_url: "https://res.cloudinary.com/drpcy82zw/image/upload/v1720038108/Child_Haircut2_zmwcjd.jpg",
     },
     {
         title: "Hårfarve",
-        link: "https://meta.com",
+        link: "/behandlinger-og-priser",
         image_url: "https://res.cloudinary.com/drpcy82zw/image/upload/v1720039642/Coloring_Hair_olsuix.jpg",
     },
     {
-        title: "Hårkur/behandlinger",
-        link: "https://amazon.com",
+        title: "Hårkur/Behandlinger",
+        link: "/behandlinger-og-priser",
         image_url: "https://res.cloudinary.com/drpcy82zw/image/upload/v1720039918/Hair_Treatment_m3nkh3.jpg",
     },
     {
-        title: "Bryn og vipper",
-        link: "https://microsoft.com",
+        title: "Bryn og Vipper",
+        link: "/behandlinger-og-priser",
         image_url: "https://res.cloudinary.com/drpcy82zw/image/upload/v1720040075/Eye_Lashes_qeexcq.jpg",
     },
 ];

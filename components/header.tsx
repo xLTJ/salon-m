@@ -45,8 +45,7 @@ export function Header() {
                     {/*<li><Link href={'/om-os'}>Om os</Link></li>*/}
                     {/*<li><Link href={'/'}>Kontakt</Link></li>*/}
                     <NavItem linkText="Forside" linkHref="/"/>
-                    <NavItem linkText="Services" linkHref="/services"/>
-                    <NavItem linkText="Priser" linkHref={"/priser"}/>
+                    <NavItem linkText="Behandlinger & Priser" linkHref="/behandlinger-og-priser"/>
                     <NavItem linkText="Om os" linkHref="/om-os"/>
                     <NavItem linkText="Kontakt" linkHref="/kontakt"/>
                 </ul>
