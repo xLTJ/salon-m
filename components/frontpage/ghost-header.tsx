@@ -5,6 +5,7 @@ import {motion} from "framer-motion";
 import {useState} from "react";
 import Link from "next/link";
 import {raleway} from "@/components/fonts";
+import Image from "next/image";
 
 export function GhostHeader() {
     return (
@@ -12,14 +13,13 @@ export function GhostHeader() {
             className={`navbar bg-base-300 absolute top-0 bg-opacity-0 text-white z-10`}
         >
             <div className="navbar-start">
-                <a className="btn btn-ghost text-xl">LOGO</a>
             </div>
             <div className="navbar-center hidden lg:block">
                 <ul
-                    className="menu-horizontal px-1 text-3xl gap-10 animate-fade-up opacity-0"
+                    className="menu-horizontal px-1 text-3xl gap-16 animate-fade-up opacity-0"
                     style={{animationFillMode: "forwards"}}
                 >
-                    <NavItem linkText="Forside" linkHref="/"/>
+                    <NavItem linkText="Services" linkHref="/services"/>
                     <NavItem linkText="Priser" linkHref="/priser"/>
                     <NavItem linkText="Om os" linkHref="/om-os"/>
                     <NavItem linkText="Kontakt" linkHref="/kontakt"/>
@@ -48,7 +48,7 @@ const NavItem = ({linkText, linkHref}: { linkText: string; linkHref: string }) =
             className={""}
         >
             <Link href={linkHref}
-                  className={`relative py-2 px-6 ${raleway.className} font-semibold`}>
+                  className={`relative py-2 px-4 ${raleway.className} font-semibold`}>
                 {linkText}
                 <motion.span
                     className="absolute bottom-0 left-0 h-0.5 bg-secondary rounded-xl"

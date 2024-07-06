@@ -74,6 +74,8 @@ const config: Config = {
                     'info': '#171618',
                     'info-content': '#FFF',
                     'base-content': '#000000',
+
+                    "--rounded-btn": "0.5rem",
                 },
             },
         ],

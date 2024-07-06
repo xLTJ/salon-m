@@ -6,8 +6,8 @@ import {HoverEffect} from "@/components/ui/card-hover-effect";
 export function ServicesSection() {
     return (
         <section className={"bg-slate-400/50"}>
-            <div className={"pt-32 pb-12"}>
-                <h2 className={`${raleway.className} text-6xl font-semibold`}>Hvad tilbyder vi?</h2>
+            <div className={"pt-12 pb-2 md:pt-24 md:pb-12"}>
+                <h2 className={`${raleway.className} text-4xl md:text-6xl font-semibold`}>Hvad tilbyder vi?</h2>
             </div>
             <div className="max-w-5xl mx-auto px-8">
                 <HoverEffect items={projects}/>
