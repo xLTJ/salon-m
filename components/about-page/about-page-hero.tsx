@@ -32,11 +32,12 @@ export default function AboutPageHero() {
                         >
                             Kontakt Os
                         </Link>
-                        <button
+                        <Link
                             className="btn btn-primary font-bold px-6"
+                            href={'/booking'}
                         >
                             Bestil Tid
-                        </button>
+                        </Link>
                     </div>
                 </div>
             </div>
