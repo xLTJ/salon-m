@@ -1,15 +1,14 @@
 import AboutPageHero from "@/components/about-page/about-page-hero";
 import {StickyScroll} from "@/components/ui/sticky-scroll-reveal";
 import Image from "next/image";
+import PersonaleSection from "@/components/about-page/personale-section";
 
 export default function Page() {
     return (
         <main className={""}>
             <AboutPageHero/>
             <StickyScroll content={content}/>
-            <section className={"h-screen"}>
-                <h1>Om os</h1>
-            </section>
+            <PersonaleSection/>
         </main>
     )
 }
