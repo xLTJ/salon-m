@@ -7,6 +7,7 @@ import {GhostHeader} from "@/components/frontpage/ghost-header";
 import {Hero} from "@/components/frontpage/hero";
 import {AboutSection} from "@/components/frontpage/sections/about-section";
 import {ServicesSection} from "@/components/frontpage/sections/services-section";
+import Link from "next/link";
 
 const inter = Inter({subsets: ["latin"]});
 
@@ -35,9 +36,15 @@ export default function RootLayout({
 
             <div className="drawer-side z-50">
                 <label htmlFor="my-drawer" aria-label="close sidebar" className="drawer-overlay"></label>
-                <ul className="menu bg-base-200 text-base-content min-h-full w-80 p-4">
-                    <li><a>Sidebar Item 1</a></li>
-                    <li><a>Sidebar Item 2</a></li>
+                <ul className="menu bg-base-200 text-base-content min-h-full w-80 p-4 text-lg">
+                    <li><Link href={'/'}>Forside</Link></li>
+                    <li><Link href={'/behandlinger-og-priser'}>Behandlinger & Priser</Link></li>
+                    <li><Link href={'/om-os'}>Om Os</Link></li>
+                    <li><Link href={'/kontakt'}>Kontakt</Link></li>
+                    <div className="divider"></div>
+                    <li><Link href={'/booking'} className={"bg-primary text-primary-content"}>Bestil
+                        Tid</Link>
+                    </li>
                 </ul>
             </div>
         </div>

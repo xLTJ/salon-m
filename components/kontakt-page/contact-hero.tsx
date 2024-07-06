@@ -26,10 +26,10 @@ export default function ContactHero() {
                     <div className={"mt-12 flex gap-6 justify-center animate-fade-up opacity-0"}
                          style={{animationDelay: "0.35s", animationFillMode: "forwards"}}>
                         <Link
-                            className="btn btn-neutral font-bold"
-                            href={'/kontakt'}
+                            className="btn btn-neutral font-bold px-6"
+                            href={'/om-os'}
                         >
-                            Kontakt Os
+                            Om Os
                         </Link>
                         <Link
                             className="btn btn-primary font-bold px-6"

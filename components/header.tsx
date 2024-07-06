@@ -37,7 +37,7 @@ export function Header() {
                     />
                 </Link>
             </div>
-            <nav className="flex hidden lg:block">
+            <nav className="flex hidden xl:block">
                 <ul className="menu-horizontal px-1 text-2xl gap-10">
                     {/*<li><Link href={'/'}>Forside</Link></li>*/}
                     {/*<li><Link href={'/'}>Services</Link></li>*/}
@@ -51,7 +51,7 @@ export function Header() {
                 </ul>
             </nav>
             <div className={'mx-10 py-2 hidden md:block'}>
-                <a className={"btn btn-primary text-xl"}>Bestil Tid</a>
+                <Link className={"btn btn-primary text-xl"} href={'/booking'}>Bestil Tid</Link>
             </div>
             <div className={"relative flex mr-6"}>
                 <div className={"absolute z-0 h-10 w-10"}>

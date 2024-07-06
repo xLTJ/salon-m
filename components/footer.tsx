@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export function Footer() {
     return (
@@ -23,10 +24,10 @@ export function Footer() {
                 </nav>
                 <nav>
                     <h6 className="footer-title">Genveje</h6>
-                    <a className="link link-hover">Priser</a>
-                    <a className="link link-hover">Om os</a>
-                    <a className="link link-hover">Kontakt</a>
-                    <a className="link link-hover">Services</a>
+                    <Link className="link link-hover" href={'/behandlinger-og-priser'}>Behandlinger & Priser</Link>
+                    <Link className="link link-hover" href={'/om-os'}>Om os</Link>
+                    <Link className="link link-hover" href={'/kontakt'}>Kontakt</Link>
+                    <Link className="link link-hover" href={'/booking'}>Booking</Link>
                 </nav>
                 <nav>
                     <h6 className="footer-title">Åbningstider</h6>

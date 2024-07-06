@@ -1,9 +1,10 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function ServicesAndPricesOverviewSection() {
     return (
-        <section className={"container m-auto my-24"}>
-            <div className={"grid grid-cols-2 gap-8"}>
+        <section className={"container m-auto my-24 flex justify-center"}>
+            <div className={"grid grid-cols-1 xl:grid-cols-2 gap-8 flex-1 max-w-[82rem] mx-8 sm:mx-0"}>
                 <div className={"flex flex-col gap-8"}>
                     <ServiceCard
                         imgHref={"https://res.cloudinary.com/drpcy82zw/image/upload/v1720037438/Female_Haircut2_xpb7mq.jpg"}
@@ -14,11 +15,30 @@ export default function ServicesAndPricesOverviewSection() {
                     </ServiceCard>
 
                     <ServiceCard
+                        imgHref={"https://res.cloudinary.com/drpcy82zw/image/upload/v1720037082/Male_Haircut_aiivq3.jpg"}
+                        serviceTitle={"Herreklip"}
+                    >
+                        <PriceObject serviceName={"Herreklip"} price={"249"}/>
+                        <PriceObject serviceName={"Herre med vask og tøring"} price={"319"}/>
+                        <PriceObject serviceName={"Skægtriming"} price={"99"}/>
+                    </ServiceCard>
+
+                    <ServiceCard
                         imgHref={"https://res.cloudinary.com/drpcy82zw/image/upload/v1720038108/Child_Haircut2_zmwcjd.jpg"}
                         serviceTitle={"Børneklip - under 12 år"}
                     >
                         <PriceObject serviceName={"Børneklip"} price={"229"}/>
                         <PriceObject serviceName={"Herre med vask og tøring"} price={"320,00"}/>
+                    </ServiceCard>
+
+                </div>
+                <div className={"flex flex-col gap-8"}>
+                    <ServiceCard
+                        imgHref={"https://res.cloudinary.com/drpcy82zw/image/upload/v1720039642/Coloring_Hair_olsuix.jpg"}
+                        serviceTitle={"Hårfarve"}
+                    >
+                        <PriceObject serviceName={"Placeholder"} price={"250,00"}/>
+                        <PriceObject serviceName={"Placeholder"} price={"320,00"}/>
                     </ServiceCard>
 
                     <ServiceCard
@@ -29,32 +49,13 @@ export default function ServicesAndPricesOverviewSection() {
                         <PriceObject serviceName={"Placeholder"} price={"320,00"}/>
                     </ServiceCard>
 
-
-                </div>
-                <div className={"flex flex-col gap-8"}>
-                    <ServiceCard
-                        imgHref={"https://res.cloudinary.com/drpcy82zw/image/upload/v1720037082/Male_Haircut_aiivq3.jpg"}
-                        serviceTitle={"Herreklip"}
-                    >
-                        <PriceObject serviceName={"Herreklip"} price={"249"}/>
-                        <PriceObject serviceName={"Herre med vask og tøring"} price={"319"}/>
-                        <PriceObject serviceName={"Skægtriming"} price={"99"}/>
-                    </ServiceCard>
-
-                    <ServiceCard
-                        imgHref={"https://res.cloudinary.com/drpcy82zw/image/upload/v1720039642/Coloring_Hair_olsuix.jpg"}
-                        serviceTitle={"Hårfarve"}
-                    >
-                        <PriceObject serviceName={"Placeholder"} price={"250,00"}/>
-                        <PriceObject serviceName={"Placeholder"} price={"320,00"}/>
-                    </ServiceCard>
-
                     <ServiceCard
                         imgHref={"https://res.cloudinary.com/drpcy82zw/image/upload/v1720040075/Eye_Lashes_qeexcq.jpg"}
                         serviceTitle={"Bryn og Vipper"}
                     >
-                        <PriceObject serviceName={"Placeholder"} price={"250,00"}/>
-                        <PriceObject serviceName={"Placeholder"} price={"320,00"}/>
+                        <PriceObject serviceName={"Retning af øjenbryn"} price={"115"}/>
+                        <PriceObject serviceName={"Farvning af vipper"} price={"100"}/>
+                        <PriceObject serviceName={"Farvning af øjenbryn"} price={"100"}/>
                     </ServiceCard>
                 </div>
             </div>
@@ -69,12 +70,14 @@ const ServiceCard = ({imgHref, serviceTitle, children}: {
     children: React.ReactNode;
 }) => {
     return (
-        <div className="card card-side bg-base-200 shadow-xl">
-            <figure className={"w-80 relative"}>
+        <div className="card bg-base-200 shadow-xl group">
+            <figure className={"relative h-80 overflow-hidden"}>
                 <Image
                     src={imgHref}
                     alt={serviceTitle}
-                    fill={true}
+                    height={500}
+                    width={500}
+                    className={"object-cover object-center absolute inset-0 h-full w-full group-hover:scale-110 duration-1000"}
                 />
             </figure>
             <div className="card-body">
@@ -83,7 +86,7 @@ const ServiceCard = ({imgHref, serviceTitle, children}: {
                     {children}
                 </div>
                 <div className="card-actions justify-end">
-                    <button className="btn btn-primary">Book Her</button>
+                    <Link className="btn btn-primary" href={'/booking'}>Book Her</Link>
                 </div>
             </div>
         </div>
