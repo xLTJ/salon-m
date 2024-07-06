@@ -6,7 +6,7 @@ import Link from "next/link";
 export default function AboutPageHero() {
     return (
         <div
-            className="hero h-[50vh] relative"
+            className="hero h-[70vh] relative"
             style={{
                 backgroundImage: "url(https://res.cloudinary.com/drpcy82zw/image/upload/v1720264944/Salon-Backdrop-1_dqu7dr.jpg)",
             }}>

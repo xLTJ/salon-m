@@ -9,7 +9,9 @@ export function AboutSection() {
                 <h2 className={`${raleway.className} text-6xl font-semibold`}>Velkommen til <span
                     className={"text-primary"}>Salon M</span></h2>
                 <div className={"flex gap-0 lg:gap-10"}>
-                    <div>
+                    <div className={"relative"}>
+                        <div
+                            className={"2xl:h-[435px] 2xl:w-[425px] xl:h-[405px] xl:w-[395px] h-[365px] w-[355px] bg-primary top-2 right-1 absolute z-0 rounded-xl hidden lg:block"}/>
                         <Image
                             src={"https://res.cloudinary.com/drpcy82zw/image/upload/v1720186194/7A705A76-A2DA-4984-B638-F3AFE05651B1_ac8a4h.jpg"}
                             alt={"Vores Salon"}
