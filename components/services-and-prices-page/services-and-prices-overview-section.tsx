@@ -1,5 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
+import {list} from "postcss";
+import {generateKey} from "node:crypto";
 
 export default function ServicesAndPricesOverviewSection() {
     return (
@@ -10,25 +12,31 @@ export default function ServicesAndPricesOverviewSection() {
                         imgHref={"https://res.cloudinary.com/drpcy82zw/image/upload/v1720037438/Female_Haircut2_xpb7mq.jpg"}
                         serviceTitle={"Dameklip"}
                     >
-                        <PriceObject serviceName={"Dameklip"} price={"000"}/>
-                        <PriceObject serviceName={"Dameklip med vask og tøring"} price={"399"}/>
+                        <PriceEntries services={[
+                            {serviceName: "Dameklip med vask og tøring", price: "399"},
+                            {serviceName: "Tillæg for tykt hår", price: "100"},
+                        ]}/>
                     </ServiceCard>
 
                     <ServiceCard
                         imgHref={"https://res.cloudinary.com/drpcy82zw/image/upload/v1720037082/Male_Haircut_aiivq3.jpg"}
                         serviceTitle={"Herreklip"}
                     >
-                        <PriceObject serviceName={"Herreklip"} price={"249"}/>
-                        <PriceObject serviceName={"Herre med vask og tøring"} price={"319"}/>
-                        <PriceObject serviceName={"Skægtriming"} price={"99"}/>
+                        <PriceEntries services={[
+                            {serviceName: "Herreklip", price: "249"},
+                            {serviceName: "Herreklip med vask og tøring", price: "319"},
+                            {serviceName: "Skægtrimning med vask og tøring", price: "99"},
+                            {serviceName: "Tillæg for tykt hår", price: "100"},
+                        ]}/>
                     </ServiceCard>
 
                     <ServiceCard
                         imgHref={"https://res.cloudinary.com/drpcy82zw/image/upload/v1720038108/Child_Haircut2_zmwcjd.jpg"}
                         serviceTitle={"Børneklip - under 12 år"}
                     >
-                        <PriceObject serviceName={"Børneklip"} price={"229"}/>
-                        <PriceObject serviceName={"Herre med vask og tøring"} price={"320,00"}/>
+                        <PriceEntries services={[
+                            {serviceName: "Børneklip", price: "229"},
+                        ]}/>
                     </ServiceCard>
 
                 </div>
@@ -37,25 +45,36 @@ export default function ServicesAndPricesOverviewSection() {
                         imgHref={"https://res.cloudinary.com/drpcy82zw/image/upload/v1720039642/Coloring_Hair_olsuix.jpg"}
                         serviceTitle={"Hårfarve"}
                     >
-                        <PriceObject serviceName={"Placeholder"} price={"250,00"}/>
-                        <PriceObject serviceName={"Placeholder"} price={"320,00"}/>
+                        <PriceEntries services={[
+                            {serviceName: "Helfarve", price: "899 - 1799"},
+                            {serviceName: "Striber", price: "799 - 1199"},
+                            {serviceName: "Bundfarve (op til 3 cm)", price: "499"},
+                            {serviceName: "Babylights", price: "1365 - 1865"},
+                            {serviceName: "Balayage", price: "1875 - 2175"},
+                            {serviceName: "Reflekser", price: "1265 - 1665"},
+                            {serviceName: "Toning", price: "400 - 800"},
+                        ]}/>
                     </ServiceCard>
 
                     <ServiceCard
                         imgHref={"https://res.cloudinary.com/drpcy82zw/image/upload/v1720039918/Hair_Treatment_m3nkh3.jpg"}
                         serviceTitle={"Hårkur/Behandlinger"}
                     >
-                        <PriceObject serviceName={"Placeholder"} price={"250,00"}/>
-                        <PriceObject serviceName={"Placeholder"} price={"320,00"}/>
+                        <PriceEntries services={[
+                            {serviceName: "Hårkur", price: "499"},
+                            {serviceName: "Hårkur sammen med anden behandling", price: "275"},
+                        ]}/>
                     </ServiceCard>
 
                     <ServiceCard
                         imgHref={"https://res.cloudinary.com/drpcy82zw/image/upload/v1720040075/Eye_Lashes_qeexcq.jpg"}
                         serviceTitle={"Bryn og Vipper"}
                     >
-                        <PriceObject serviceName={"Retning af øjenbryn"} price={"115"}/>
-                        <PriceObject serviceName={"Farvning af vipper"} price={"100"}/>
-                        <PriceObject serviceName={"Farvning af øjenbryn"} price={"100"}/>
+                        <PriceEntries services={[
+                            {serviceName: "Retning af øjenbryn", price: "115"},
+                            {serviceName: "Farvning af vipper", price: "100"},
+                            {serviceName: "Farvning af øjenbryn", price: "100"},
+                        ]}/>
                     </ServiceCard>
                 </div>
             </div>
@@ -93,14 +112,24 @@ const ServiceCard = ({imgHref, serviceTitle, children}: {
     )
 }
 
-const PriceObject = ({serviceName, price}: {
+type ServiceEntry = {
     serviceName: string;
     price: string;
+}
+
+const PriceEntries = ({services}: {
+    services: ServiceEntry[];
 }) => {
     return (
-        <div className={""}>
-            <h3 className={"text-lg font-bold"}>{serviceName}</h3>
-            <p>{price} kr.</p>
-        </div>
+        <>
+            {services.map(service => {
+                return (
+                    <div className={""} key={service.serviceName + service.price}>
+                        <h3 className={"text-lg font-bold"}>{service.serviceName}</h3>
+                        <p>{service.price} kr.</p>
+                    </div>
+                )
+            })}
+        </>
     )
 }

@@ -13,7 +13,7 @@ export default function ContactInfoSection() {
                 className={"grid grid-cols-1 xl:grid-cols-3 xl:gap-10 gap-4 w-[90%] lg:w-[70%] xl:w-auto items-center"}>
                 <GlareCard className="flex flex-col items-center justify-center">
                     <PhoneIcon className={"w-16 h-16 text-white"}/>
-                    <p className="text-white font-bold text-xl mt-4">+45 43 93 16 31</p>
+                    <p className="text-white font-bold text-xl mt-4">+45 24 47 88 99</p>
                 </GlareCard>
                 <GlareCard className="flex flex-col items-center justify-center">
                     <EnvelopeIcon className={"w-16 h-16 text-white"}/>

@@ -18,7 +18,7 @@ export function Footer() {
                 </aside>
                 <nav>
                     <h6 className="footer-title">Kontakt Info</h6>
-                    <a className="link link-hover">+45 43 93 16 31</a>
+                    <a className="link link-hover">+45 24 47 88 99</a>
                     <a className="link link-hover">maijimmischram@gmail.com</a>
                     <a className="link link-hover">Hovedvejen 116, 2600 Glostrup</a>
                 </nav>

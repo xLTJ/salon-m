@@ -6,6 +6,8 @@ import Link from "next/link";
 import {lato} from "@/components/fonts";
 import {AboutSection} from "@/components/frontpage/sections/about-section";
 import {ServicesSection} from "@/components/frontpage/sections/services-section";
+import ReactCompareImage from 'react-compare-image';
+import GallerySection from "@/components/frontpage/sections/gallery-section";
 
 export default function Home() {
     return (
@@ -16,6 +18,7 @@ export default function Home() {
             <div className={"text-center"}>
                 <AboutSection/>
                 <ServicesSection/>
+                <GallerySection/>
             </div>
         </main>
     );

@@ -19,6 +19,7 @@
     "framer-motion": "^11.2.12",
     "next": "14.2.4",
     "react": "^18",
+    "react-compare-image": "^3.4.0",
     "react-dom": "^18",
     "react-element-to-jsx-string": "^15.0.0",
     "sonner": "^1.5.0",
