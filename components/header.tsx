@@ -28,7 +28,7 @@ export function Header() {
             className={`navbar z-50 bg-base-300 fixed top-0 bg-opacity-100 text-black duration-500 transition-all ease-in-out ${hideHeader && 'opacity-0 translate-y-[-5rem]'}`}
         >
             <div className="flex-1">
-                <Link href={'/'} className={"btn btn-ghost"}>
+                <Link href={'/'} className={"btn btn-ghost text-white"}>
                     <Image
                         src={"https://res.cloudinary.com/drpcy82zw/image/upload/v1720139965/SalonM-Logo-Notext-Nobackground_ngwsb0.svg"}
                         alt={"logo"}

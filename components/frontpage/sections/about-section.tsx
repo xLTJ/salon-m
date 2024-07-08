@@ -5,9 +5,9 @@ import Link from "next/link";
 export function AboutSection() {
     return (
         <section className={"flex flex-col items-center container m-auto "}>
-            <div className={"py-16 md:py-32 flex flex-col gap-16 max-w-[90%] lg:max-w-[80%]"}>
+            <div className={"py-32 flex flex-col gap-16 max-w-[90%] lg:max-w-[80%]"}>
                 <h2 className={`${raleway.className} text-5xl md:text-6xl font-semibold`}>Velkommen til <span
-                    className={"text-primary"}>Salon M</span></h2>
+                    className={"text-primary"}>Frisør M</span></h2>
                 <div className={"flex gap-0 lg:gap-10"}>
                     <div className={"relative"}>
                         <div

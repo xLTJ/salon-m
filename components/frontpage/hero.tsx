@@ -15,11 +15,17 @@ export function Hero() {
             <div className="hero-content text-neutral-content text-center px-12">
                 <div className="text-white">
                     <h1
-                        className={`${raleway.className} mb-5 text-4xl md:text-6xl lg:text-8xl animate-fade-up opacity-0 font-semibold`}
+                        className={`${raleway.className} text-4xl md:text-6xl lg:text-8xl animate-fade-up opacity-0 font-bold mb-5`}
+                        style={{animationDelay: "0.15s", animationFillMode: "forwards"}}
+                    >
+                        Frisør M
+                    </h1>
+                    <h2
+                        className={`${raleway.className} mb-5 text-3xl md:text-5xl lg:text-7xl animate-fade-up opacity-0 font-semibold`}
                         style={{animationDelay: "0.15s", animationFillMode: "forwards"}}
                     >
                         Din personlige frisør i Glostrup
-                    </h1>
+                    </h2>
                     <p
                         className="mb-5 animate-fade-up opacity-0"
                         style={{animationDelay: "0.25s", animationFillMode: "forwards"}}
