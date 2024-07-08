@@ -39,14 +39,9 @@ export function Header() {
             </div>
             <nav className="flex hidden xl:block">
                 <ul className="menu-horizontal px-1 text-2xl gap-10">
-                    {/*<li><Link href={'/'}>Forside</Link></li>*/}
-                    {/*<li><Link href={'/'}>Services</Link></li>*/}
-                    {/*<li><Link href={'/'}>Priser</Link></li>*/}
-                    {/*<li><Link href={'/om-os'}>Om os</Link></li>*/}
-                    {/*<li><Link href={'/'}>Kontakt</Link></li>*/}
                     <NavItem linkText="Forside" linkHref="/"/>
-                    <NavItem linkText="Behandlinger & Priser" linkHref="/behandlinger-og-priser"/>
                     <NavItem linkText="Om os" linkHref="/om-os"/>
+                    <NavItem linkText="Behandlinger & Priser" linkHref="/behandlinger-og-priser"/>
                     <NavItem linkText="Kontakt" linkHref="/kontakt"/>
                 </ul>
             </nav>

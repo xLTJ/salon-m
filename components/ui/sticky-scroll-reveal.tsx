@@ -21,7 +21,7 @@ export const StickyScroll = ({
         // uncomment line 22 and comment line 23 if you DONT want the overflow container and want to have it change on the entire page scroll
         target: ref,
         // container: ref,
-        offset: ["start center", "end center"],
+        offset: ["25% 75%", "75% 25%"],
     });
     const cardLength = content.length;
 
@@ -42,14 +42,13 @@ export const StickyScroll = ({
 
     const backgroundColors = [
         "var(--white)",
-        "var(--red-200)",
-        "var(--slate-300)",
-        "var(--white)",
+        "var(--red-100)",
+        "var(--orange-50)",
+        "var(--slate-200)",
+        "var(--amber-50)",
     ];
     const linearGradients = [
-        "linear-gradient(to bottom right, var(--cyan-500), var(--emerald-500))",
-        "linear-gradient(to bottom right, var(--pink-500), var(--indigo-500))",
-        "linear-gradient(to bottom right, var(--orange-500), var(--yellow-500))",
+        "linear-gradient(to bottom right, var(--slate-500), var(white))",
     ];
 
     const [backgroundGradient, setBackgroundGradient] = useState(
@@ -71,13 +70,13 @@ export const StickyScroll = ({
             <div className="div relative flex items-start px-4">
                 <div className="max-w-2xl">
                     {content.map((item, index) => (
-                        <div key={item.title + index} className="my-28">
+                        <div key={item.title + index} className="mb-8 lg:mb-32 mt-10">
                             <motion.h2
                                 initial={{
                                     opacity: 0,
                                 }}
                                 animate={{
-                                    opacity: activeCard === index ? 1 : 0.3,
+                                    opacity: activeCard === index ? 1 : 0.1,
                                 }}
                                 className="text-3xl font-bold text-black"
                             >
@@ -100,7 +99,7 @@ export const StickyScroll = ({
                 </div>
             </div>
             <div
-                style={{background: backgroundGradient}}
+                style={{background: backgroundGradient, transition: 'background 0.5s ease-in-out'}}
                 className={cn(
                     "hidden lg:block h-[26rem] w-[32rem] rounded-md bg-white sticky top-[40vh] overflow-hidden",
                     contentClassName

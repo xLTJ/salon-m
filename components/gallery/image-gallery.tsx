@@ -1,93 +1,53 @@
-"use client";
-import React, {useState, useRef, useEffect} from "react";
-import {LayoutGrid} from "../ui/layout-grid";
+'use client'
+import PhotoAlbum from "react-photo-album";
+import Lightbox from "yet-another-react-lightbox";
+import {Suspense, useState} from "react";
 
-export function LayoutGridDemo() {
+export default function Gallery() {
+    const [index, setIndex] = useState(-1);
+
     return (
-        <div className="h-screen py-20 w-full">
-            <LayoutGrid cards={cards}/>
+        <div className={"container mx-auto mb-16"}>
+            <Suspense fallback={<span className="absolute inset-[50%] loading loading-spinner loading-lg"></span>}>
+                <PhotoAlbum
+                    layout="masonry"
+                    photos={slides}
+                    targetRowHeight={300}
+                />
+            </Suspense>
         </div>
     );
 }
 
-const SkeletonOne = () => {
-    return (
-        <div>
-            <p className="font-bold text-4xl text-white">House in the woods</p>
-            <p className="font-normal text-base text-white"></p>
-            <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
-                A serene and tranquil retreat, this house in the woods offers a peaceful
-                escape from the hustle and bustle of city life.
-            </p>
-        </div>
-    );
-};
-
-const SkeletonTwo = () => {
-    return (
-        <div>
-            <p className="font-bold text-4xl text-white">House above the clouds</p>
-            <p className="font-normal text-base text-white"></p>
-            <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
-                Perched high above the world, this house offers breathtaking views and a
-                unique living experience. It&apos;s a place where the sky meets home,
-                and tranquility is a way of life.
-            </p>
-        </div>
-    );
-};
-const SkeletonThree = () => {
-    return (
-        <div>
-            <p className="font-bold text-4xl text-white">Greens all over</p>
-            <p className="font-normal text-base text-white"></p>
-            <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
-                A house surrounded by greenery and nature&apos;s beauty. It&apos;s the
-                perfect place to relax, unwind, and enjoy life.
-            </p>
-        </div>
-    );
-};
-const SkeletonFour = () => {
-    return (
-        <div>
-            <p className="font-bold text-4xl text-white">Rivers are serene</p>
-            <p className="font-normal text-base text-white"></p>
-            <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
-                A house by the river is a place of peace and tranquility. It&apos;s the
-                perfect place to relax, unwind, and enjoy life.
-            </p>
-        </div>
-    );
-};
-
-const cards = [
+export const slides = [
     {
-        id: 1,
-        content: <SkeletonOne/>,
-        className: "md:col-span-2",
-        thumbnail:
-            "https://res.cloudinary.com/drpcy82zw/image/upload/v1720279964/Female-Haircut-2.jpg",
+        src: "https://res.cloudinary.com/drpcy82zw/image/upload/v1720452133/Female-haircut-4_s8ozxl.jpg",
+        width: 1125,
+        height: 972
     },
     {
-        id: 2,
-        content: <SkeletonTwo/>,
-        className: "col-span-1",
-        thumbnail:
-            "https://res.cloudinary.com/drpcy82zw/image/upload/v1720039918/Hair_Treatment_m3nkh3.jpg",
+        src: "https://res.cloudinary.com/drpcy82zw/image/upload/v1720452477/female-haircut-5_d4tl3x.jpg",
+        width: 3024,
+        height: 2626
     },
     {
-        id: 3,
-        content: <SkeletonThree/>,
-        className: "col-span-1",
-        thumbnail:
-            "https://res.cloudinary.com/drpcy82zw/image/upload/v1720038108/Child_Haircut2_zmwcjd.jpg",
+        src: "https://res.cloudinary.com/drpcy82zw/image/upload/v1720453118/female-hair-comparison-1b_fop5ai.jpg",
+        width: 1125,
+        height: 1359
     },
     {
-        id: 4,
-        content: <SkeletonFour/>,
-        className: "md:col-span-2",
-        thumbnail:
-            "https://res.cloudinary.com/drpcy82zw/image/upload/v1720036001/Female_Haircut_jpiamv.jpg",
+        src: "https://res.cloudinary.com/drpcy82zw/image/upload/v1720458700/female-haircut-6_myq985.jpg",
+        width: 3024,
+        height: 4032
     },
-];
+    {
+        src: "https://res.cloudinary.com/drpcy82zw/image/upload/v1720458700/female-haircut-7_pfwlud.jpg",
+        width: 3024,
+        height: 4032
+    },
+    {
+        src: "https://res.cloudinary.com/drpcy82zw/image/upload/v1720458737/female-haircut-8_tbvw7n.jpg",
+        width: 2566,
+        height: 3638
+    },
+]

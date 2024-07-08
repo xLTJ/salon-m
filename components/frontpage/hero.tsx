@@ -18,12 +18,12 @@ export function Hero() {
                         className={`${raleway.className} mb-5 text-4xl md:text-6xl lg:text-8xl animate-fade-up opacity-0 font-semibold`}
                         style={{animationDelay: "0.15s", animationFillMode: "forwards"}}
                     >
-                        Slogan der siger et eller andet!
+                        Din personlige frisør i Glostrup
                     </h1>
                     <p
                         className="mb-5 animate-fade-up opacity-0"
                         style={{animationDelay: "0.25s", animationFillMode: "forwards"}}
-                    >Noget mere tekst her der kan bruges til at sige flere ting, find på et eller andet her idk
+                    >Forkæl dig selv med en afslappende og professionel hårbehandling.
                     </p>
                     <Link
                         className="border-0 relative inline-flex overflow-hidden rounded-full p-[1px] mt-6 group animate-fade-up opacity-0"
