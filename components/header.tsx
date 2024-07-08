@@ -48,7 +48,7 @@ export function Header() {
             <div className={'mx-10 py-2 hidden md:block'}>
                 <Link className={"btn btn-primary text-xl"} href={'/booking'}>Bestil Tid</Link>
             </div>
-            <div className={"relative flex mr-6"}>
+            <div className={"relative flex mr-6 py-2"}>
                 <div className={"absolute z-0 h-10 w-10"}>
                     <Bars3Icon/>
                 </div>
