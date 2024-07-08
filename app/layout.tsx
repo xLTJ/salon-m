@@ -3,10 +3,8 @@ import {Inter} from "next/font/google";
 import "./globals.css";
 import {Header} from "@/components/header";
 import {Footer} from "@/components/footer";
-import {GhostHeader} from "@/components/frontpage/ghost-header";
-import {Hero} from "@/components/frontpage/hero";
-import {AboutSection} from "@/components/frontpage/sections/about-section";
-import {ServicesSection} from "@/components/frontpage/sections/services-section";
+import {Analytics} from "@vercel/analytics/react"
+import {SpeedInsights} from "@vercel/speed-insights/next"
 import Link from "next/link";
 
 const inter = Inter({subsets: ["latin"]});
@@ -31,6 +29,8 @@ export default function RootLayout({
             <div className="drawer-content">
                 <Header/>
                 {children}
+                <Analytics/>
+                <SpeedInsights/>
                 <Footer/>
             </div>
 
