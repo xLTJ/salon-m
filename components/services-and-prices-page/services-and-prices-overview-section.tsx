@@ -5,7 +5,7 @@ import {generateKey} from "node:crypto";
 
 export default function ServicesAndPricesOverviewSection() {
     return (
-        <section className={"container m-auto my-24 flex justify-center"}>
+        <section className={"container m-auto my-12 flex justify-center"}>
             <div className={"grid grid-cols-1 xl:grid-cols-2 gap-8 flex-1 max-w-[82rem] mx-8 sm:mx-0"}>
                 <div className={"flex flex-col gap-8"}>
                     <ServiceCard
@@ -25,8 +25,8 @@ export default function ServicesAndPricesOverviewSection() {
                         <PriceEntries services={[
                             {serviceName: "Herreklip", price: "249"},
                             {serviceName: "Herreklip med vask og tøring", price: "319"},
-                            {serviceName: "Skægtrimning med vask og tøring", price: "99"},
-                            {serviceName: "Tillæg for tykt hår", price: "100"},
+                            {serviceName: "Maskineklip", price: "200"},
+                            {serviceName: "Triming af skæg", price: "99"},
                         ]}/>
                     </ServiceCard>
 

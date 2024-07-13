@@ -8,6 +8,7 @@ import {AboutSection} from "@/components/frontpage/sections/about-section";
 import {ServicesSection} from "@/components/frontpage/sections/services-section";
 import ReactCompareImage from 'react-compare-image';
 import GallerySection from "@/components/frontpage/sections/gallery-section";
+import PopupModal from "@/components/ui/popup-modal";
 
 export default function Home() {
     return (
@@ -19,6 +20,7 @@ export default function Home() {
                 <AboutSection/>
                 <ServicesSection/>
                 <GallerySection/>
+                <PopupModal/>
             </div>
         </main>
     );
