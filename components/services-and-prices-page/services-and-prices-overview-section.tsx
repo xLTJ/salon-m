@@ -26,7 +26,7 @@ export default function ServicesAndPricesOverviewSection() {
                             {serviceName: "Herreklip", price: "249"},
                             {serviceName: "Herreklip med vask og tøring", price: "319"},
                             {serviceName: "Maskineklip", price: "200"},
-                            {serviceName: "Triming af skæg", price: "100"},
+                            {serviceName: "Triming af skæg", price: "99"},
                         ]}/>
                     </ServiceCard>
 
