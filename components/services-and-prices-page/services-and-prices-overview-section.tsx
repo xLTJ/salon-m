@@ -46,7 +46,7 @@ export default function ServicesAndPricesOverviewSection() {
                         serviceTitle={"Hårfarve"}
                     >
                         <PriceEntries services={[
-                            {serviceName: "Helfarve", price: "899 - 1799"},
+                            {serviceName: "Helfarve", price: "650 - 1200"},
                             {serviceName: "Striber", price: "799 - 1400`"},
                             {serviceName: "Bundfarve (op til 3 cm)", price: "499"},
                             {serviceName: "Babylights", price: "1365 - 1865"},
