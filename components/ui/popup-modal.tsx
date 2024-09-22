@@ -33,7 +33,7 @@ export default function PopupModal() {
                     />
                 </div>
                 <p className="pt-4 text-lg sm:text-xl">15% rabat ved alle behandlinger. Gælder ikke behandlinger under 300 kr.</p>
-                <p className={"pt-2 font-bold sm:text-lg"}>Bemærk <span className={"text-secondary"}>Rabatten kan ikke kombineres med andre rabataftaler.</span> (Rabatten
+                <p className={"pt-2 font-bold sm:text-lg"}><span className={"text-secondary"}>Rabatten kan ikke kombineres med andre rabataftaler.</span> (Rabatten
                     gælder kun
                     ved online booking.)</p>
                 <div className="modal-action">
