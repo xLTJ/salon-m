@@ -22,7 +22,7 @@ export default function PopupModal() {
                 <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2"
                         onClick={() => setShowModal(false)}>✕
                 </button>
-                <h3 className={`font-bold text-3xl sm:text-4xl pb-8 pt-2 ${raleway.className}`}>Åbningstilbud!</h3>
+                <h3 className={`font-bold text-3xl sm:text-4xl pb-8 pt-2 ${raleway.className}`}>Efterårstilbud!</h3>
                 <div className={"w-full h-52 sm:h-80 relative rounded-xl overflow-hidden"}>
                     <Image
                         src={"https://res.cloudinary.com/drpcy82zw/image/upload/v1720792977/Hair-before-after_w3lbus.jpg"}
@@ -32,10 +32,10 @@ export default function PopupModal() {
                         className={"brightness-[0.90] saturate-[1.25]"}
                     />
                 </div>
-                <p className="pt-4 text-lg sm:text-xl">Vask, gloss, kur, hovedbundsmassage, klip og styling.</p>
-                <p className={"pt-2 font-bold sm:text-lg"}>Kun <span className={"text-secondary"}>799 kr.</span> (værdi
-                    for
-                    op til 1500 kr.)</p>
+                <p className="pt-4 text-lg sm:text-xl">15% rabat ved alle behandlinger. Gælder ikke behandlinger under 300 kr.</p>
+                <p className={"pt-2 font-bold sm:text-lg"}>Kun <span className={"text-secondary"}>Rabatten kan ikke kombineres med andre rabataftaler.</span> (Rabatten
+                    gælder kun
+                    ved online booking.)</p>
                 <div className="modal-action">
                     <Link href={'/booking'} className={'btn btn-block btn-primary'}>Book Nu</Link>
                 </div>
