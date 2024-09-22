@@ -22,7 +22,7 @@ export default function PopupModal() {
                 <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2"
                         onClick={() => setShowModal(false)}>✕
                 </button>
-                <h3 className={`font-bold text-3xl sm:text-4xl pb-8 pt-2 ${raleway.className}`}>Efterårstilbud!</h3>
+                <h3 className={`font-bold text-3xl sm:text-4xl pb-8 pt-2 ${raleway.className}`}>Efterårstilbud! Til nye kunder.</h3>
                 <div className={"w-full h-52 sm:h-80 relative rounded-xl overflow-hidden"}>
                     <Image
                         src={"https://res.cloudinary.com/drpcy82zw/image/upload/v1720792977/Hair-before-after_w3lbus.jpg"}
